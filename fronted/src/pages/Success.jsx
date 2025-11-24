@@ -37,10 +37,10 @@ export default function Success() {
     <div className="flex flex-col justify-center align-center mx-auto">
       <h2>Payment Verification</h2>
       <p>Payment status: <strong>{details?.payment_status ? "successs" : "failed"}</strong></p>
-      <p>Session id: {details?.id}</p>
+      {/* <p>Session id: {details?.id}</p> */}
       <p>Amount total (smallest unit): {details?.amount_total}</p>
       <p>Currency: {details?.currency}</p>
-      <pre style={{ whiteSpace: "pre-wrap", background: "#f3f3f3", padding: 8 }}>
+      <pre>
         {JSON.stringify(details?.payment_intent || details?.raw || details, null, 2)}
       </pre>
     </div>
